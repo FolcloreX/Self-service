@@ -1,0 +1,31 @@
+import { db } from "@/lib/prisma";
+import { notFound } from "next/navigation";
+
+import { Button } from "@/components/ui/button";
+import { ChevronLeftIcon, ScrollTextIcon } from "lucide-react";
+
+interface ProductPageProps {
+    params: Promise<{slug: string, productId: string}>;
+}
+
+const ProductPage = async ({params}: ProductPageProps) => {
+    const { slug, productId} = await params;
+    const product = await db.product.findUnique({ where: { id: productId }});
+
+    if (!product) {
+        return notFound()
+    }
+
+    return (
+    <>
+        
+        
+        <h1>Product Page</h1>
+        {slug}
+        {productId}
+    </>
+    )
+}
+
+
+export default ProductPage
