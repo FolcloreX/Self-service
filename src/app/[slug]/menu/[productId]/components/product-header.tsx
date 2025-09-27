@@ -1,8 +1,9 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import { SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { Product } from "@prisma/client";
-import { ChevronLeftIcon, ScrollTextIcon } from "lucide-react";
+import { ChevronLeftIcon, ScrollTextIcon, Sheet } from "lucide-react";
 import Image from "next/image"
 import { useRouter } from "next/navigation";
 
