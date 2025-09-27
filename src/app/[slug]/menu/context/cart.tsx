@@ -32,7 +32,26 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
     }
 
     const addProduct = (product: CartProduct) => {
-        setProducts((prev) => [...prev, product]);
+        // Verify if the item is already in the cart
+        const productIsAlreadyOnTheCart = products.some(prevProduct => prevProduct.id === product.id)
+
+        // If it's not add
+        if (!productIsAlreadyOnTheCart) {
+            return setProducts((prev) => [...prev, product])
+        }
+
+        // It's in the cart we add more quantity for each product added
+        setProducts(prevProducts => {
+            return prevProducts.map(prevProduct => {
+                if (prevProduct.id == product.id) {
+                    return {
+                        ...prevProduct,
+                        quantity: prevProduct.quantity + product.quantity,
+                    }
+                }
+                return prevProduct
+            })
+        })
     }
 
     return (
