@@ -5,7 +5,7 @@ import CartProductItem from "../../components/cart-product-item";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { formatCurrency } from "@/helpers/format-currency";
-import FinishOrderDialog from "../../components/finish-order-button";
+import FinishOrderDialog from "../../components/finish-order-dialog";
 
 
 const CartSheet = () => {
