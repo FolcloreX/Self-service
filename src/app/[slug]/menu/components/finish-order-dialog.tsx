@@ -30,7 +30,7 @@ import { isValidCpf } from "../helpers/cpf";
 import { createOrder } from "../actions/create-order";
 import { useParams, useSearchParams } from "next/navigation";
 import { ConsumptionMethod } from "@prisma/client";
-import { CartContext } from "../context/cart";
+import { CartContext } from "../contexts/cart";
 import { useContext, useTransition } from "react";
 import { toast } from "sonner";
 import { Loader2Icon } from "lucide-react";

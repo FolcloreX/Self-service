@@ -7,7 +7,7 @@ import { ScrollArea } from "@radix-ui/react-scroll-area";
 import { ChefHatIcon, ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
 import Image from "next/image"
 import { useContext, useState } from "react";
-import { CartContext } from "../../context/cart";
+import { CartContext } from "../../contexts/cart";
 import CartSheet from "./cart-sheet";
 
 

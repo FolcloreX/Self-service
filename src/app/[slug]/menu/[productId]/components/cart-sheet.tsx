@@ -1,5 +1,5 @@
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle } from "@/components/ui/sheet";
-import { CartContext } from "../../context/cart";
+import { CartContext } from "../../contexts/cart";
 import { useContext, useState } from "react";
 import CartProductItem from "../../components/cart-product-item";
 import { Button } from "@/components/ui/button";
